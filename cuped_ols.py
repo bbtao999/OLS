@@ -1,3 +1,8 @@
+#the following demonstrations in A and C show that (based on empirical evidence):
+#a. the OLS with the covariate is equivalent to the CUPED
+#-- dependent and independent variance are the same across two methods
+#b. if purely random assignment, can just use the treatment and use the cross-sectional comparison (no need for the pre-outocme)
+
 
 #-------------------------------------------------------------------------------------------#
 #A. OLS with clustered standard errors is equivalent to the variance from the delta method  #
@@ -238,6 +243,3 @@ s1=ols('Y ~ D', {'Y': dataC.clicks/dataC.views,
 s1.params['D'],s1.bse['D'] # see standard  error for D
 
 #similar results because the treatment is assigned randomly, so the pre-treatment variables are not correlated with the treatment status
-#the conclusions are (based on empirical evidence):
-#a. the OLS with the covariate is equivalent to the CUPED
-#b. if purely random assignment, can just use the treatment and use the cross-sectional comparison (no need for the pre-outocme)
